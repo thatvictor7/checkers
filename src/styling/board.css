@@ -6,23 +6,41 @@
     display: flex;
     justify-content: center;
     align-content: space-between;
+    flex-direction: column;
 }
 
 .square {
-    height: 10.5%;
+    /* height: 10.5%; */
     aspect-ratio: 4/4;
     background-color: rgba(0, 152, 152, 0.658);
     /* margin: 2px; */
+    flex-grow: 1;
 }
 
 .column {
     display: flex;
-    flex-direction: column;
-    height: 100%;
+    /* flex-direction: column; */
+    flex-direction: row;
+    /* height: 100%; */
     /* margin: 12px; */
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: space-around;
     align-content: center;
     width: inherit;
+}
+
+.disk {
+    height: 90%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.dark {
+    background-color: black;
+}
+
+.light {
+    background-color: white;
 }
 
 @media all and (max-width: 950px) {
