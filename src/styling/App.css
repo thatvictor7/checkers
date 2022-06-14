@@ -1,13 +1,26 @@
 .App {
-  height: 100vh;
+  min-height: 100vh;
+  height: fit-content;
   width: 100vw;
-  background: rgb(18, 52, 228);
-  background: linear-gradient(190deg, rgba(18, 52, 228, 1) 7%, rgba(62, 13, 162, 1) 92%);
+  /* background: rgb(18, 52, 228); */
+  background: url('../assets/wood-bg.jpg'), linear-gradient(190deg, rgba(18, 52, 228, 1) 7%, rgba(62, 13, 162, 1) 92%);
   color: white;
+  flex-direction: column;
+  justify-content: space-evenly !important;
+  background-position: center;
+  background-size: contain;
 }
 
 .flex-centered {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.teal {
+  /* color: rgb(0, 252, 252); */
+}
+
+.red {
+  /* color: rgb(202, 58, 11); */
 }

@@ -19,7 +19,7 @@ export default function Board(props) {
     const rowNum = [0,1,2,3,4,5,6,7]
     const columnChar = [0,1,2,3,4,5,6,7]
     let counter = 0
-    console.log(props.state);
+    console.log(props.state.darkCheckersPositions);
     return (
         <div id='board-container' >
             {rowNum.map((val, index) => {
@@ -34,6 +34,7 @@ export default function Board(props) {
                 </div>
             )
         })}
+
         </div>
     )
 }
