@@ -3,8 +3,8 @@ import '../styling/board.css'
 function colorSelector(num, squareNum) {
     let stringNumber = doubleDigit(squareNum)
     return num % 2 === 0 ? 
-    <div key={squareNum} style={{backgroundColor: "#3bdbff"}} className='square flex-centered'>{stringNumber}</div> : 
-    <div key={squareNum} style={{backgroundColor: "#0478b7"}} className='square flex-centered'>{stringNumber}</div>
+    <div key={squareNum} style={{backgroundColor: "rgba(204,204,204,1)"}} className='square flex-centered'>{stringNumber}</div> : 
+    <div key={squareNum} style={{backgroundColor: "rgba(0,0,0,0.7745348505613183)"}} className='square flex-centered'>{stringNumber}</div>
     // <div key={squareNum} style={{backgroundColor: "#0478b7"}} className='square flex-centered'><div className='disk light'></div></div>
 }
 
