@@ -13,7 +13,7 @@
 .square {
     /* height: 10.5%; */
     aspect-ratio: 4/4;
-    background-color: rgba(0, 152, 152, 0.658);
+    /* background-color: rgba(0, 152, 152, 0.658); */
     /* margin: 2px; */
     flex-grow: 1;
 }
@@ -36,12 +36,12 @@
     border-radius: 50%;
 }
 
-.dark {
-    background-color: black;
+.teal-checker {
+    background-color: rgb(26, 216, 249);
 }
 
-.light {
-    background-color: white;
+.red-checker {
+    background-color: rgb(202, 58, 11);
 }
 
 @media all and (max-width: 950px) {
