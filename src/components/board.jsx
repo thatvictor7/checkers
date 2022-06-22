@@ -1,12 +1,21 @@
 import '../styling/board.css'
 
+let redStart = null
+let tealStart = null
+
 function colorSelector(num, squareNum) {
     let stringNumber = doubleDigit(squareNum)
+    // console.log(num + "color select function, " + stringNumber);
     return num % 2 === 0 ? 
-    <div key={squareNum} style={{backgroundColor: "rgba(204,204,204,.6)"}} className='square flex-centered'>{stringNumber}</div> : 
-    <div key={squareNum} style={{backgroundColor: "rgba(0,0,0,0.6)"}} className='square flex-centered'>{stringNumber}</div>
+    // white
+    <div key={squareNum} style={{backgroundColor: "rgba(204,204,204,1)"}} className='square flex-centered'>{stringNumber}</div> : 
+    // black
+    <div key={squareNum} style={{backgroundColor: "rgba(0,0,0,0.99)"}} className='square flex-centered'>{stringNumber}</div>
     // <div key={squareNum} style={{backgroundColor: "rgba(0,0,0,0.7745348505613183)"}} className='square flex-centered'><div className='disk red-checker flex-centered    '>{stringNumber}</div></div>
-    // <div key={squareNum} style={{backgroundColor: "#0478b7"}} className='square flex-centered'><div className='disk light'></div></div>
+}
+
+function startingPosition(params) {
+    
 }
 
 function doubleDigit(number) {
@@ -20,7 +29,10 @@ export default function Board(props) {
     const rowNum = [0,1,2,3,4,5,6,7]
     const columnChar = [0,1,2,3,4,5,6,7]
     let counter = 0
-    // console.log(props.state.tealCheckersPositions);
+    redStart = props.state.redCheckersPositions
+    tealStart = props.state.tealCheckersPositions
+    console.log(redStart);
+    // console.log('test');
     return (
         <div id='board-container' >
             {rowNum.map((val, index) => {
@@ -29,6 +41,7 @@ export default function Board(props) {
                     {columnChar.map((v,i) => {
                         counter++
                         var res = val + v
+                        // console.log(redStart);
                     return colorSelector(res,counter)
                     // return <div key={res} className='square flex-centered'>{res}</div>
                 })}

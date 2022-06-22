@@ -2,7 +2,7 @@ import '../styling/scoreBoard.css'
 import { GiSpikedDragonHead, GiLion } from "react-icons/gi";
 
 export default function ScoreBoard(props) {
-    console.log(props.score);
+    // console.log(props.score);
     return(
         <div id="scoreboard-container" className='flex-centered'>
             {/* teal */}
